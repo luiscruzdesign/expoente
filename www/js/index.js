@@ -17,7 +17,6 @@
  * under the License.
  */
 var internetConnection;
-var snd = new Media( getPhoneGapPath() + 'test.wav' );
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -87,7 +86,7 @@ var app = {
             'Conexão com a internet',    // title
             'OK'                         // buttonName
         );
-
+        var snd = new Media( getPhoneGapPath() + 'test.wav' );
         $("#playButton").click(function(){
             alert(snd);
             playAudio("file:///android_asset/audio/01.mp3");
