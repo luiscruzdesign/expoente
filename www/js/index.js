@@ -20,16 +20,28 @@ function checkConnection() {
     var networkState = navigator.connection.type;
 
     var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
+    states[Connection.UNKNOWN]  = 'Desconhecida';
+    states[Connection.ETHERNET] = 'Ethernet';
+    states[Connection.WIFI]     = 'WiFi';
+    states[Connection.CELL_2G]  = '2G celular';
+    states[Connection.CELL_3G]  = '3G celular';
+    states[Connection.CELL_4G]  = '4G celular';
+    states[Connection.CELL]     = 'Conexão genérica para celular';
+    states[Connection.NONE]     = 'Sem acesso a internet';
 
-    alert('Connection type: ' + states[networkState]);
+    //alert('Connection type: ' + states[networkState]);
+    navigator.notification.beep(1);
+    navigator.vibrate(1000);
+    navigator.notification.alert(
+        states[networkState]),              // message
+        alertDismissed,                     // callback
+        'Conexão com a internet',    // title
+        'OK'                              // buttonName
+    );
+}
+function alertDismissed() {
+    // do something
+    console.log("Alert dismissed");
 }
 var app = {
     // Application Constructor
