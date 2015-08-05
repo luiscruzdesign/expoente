@@ -56,7 +56,7 @@ function getPhoneGapPath() {
 
     var path = window.location.pathname;
     path = path.substr( path, path.length - 10 );
-    return 'file://' + path;
+    alert(path);
 
 };
 var app = {
@@ -86,9 +86,9 @@ var app = {
             'Conexão com a internet',    // title
             'OK'                         // buttonName
         );
-        var snd = new Media( getPhoneGapPath() + 'test.wav' );
+        getPhoneGapPath();
         $("#playButton").click(function(){
-            alert(snd);
+            alert("Vai botao");
             playAudio("file:///android_asset/audio/01.mp3");
         });
     },
