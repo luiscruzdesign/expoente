@@ -30,14 +30,9 @@ function checkConnection() {
     states[Connection.NONE]     = 'Sem acesso a internet';
 
     //alert('Connection type: ' + states[networkState]);
-    navigator.notification.beep(1);
-    navigator.vibrate(1000);
-    navigator.notification.alert(
-        states[networkState]),              // message
-        alertDismissed,                     // callback
-        'Conexão com a internet',    // title
-        'OK'                              // buttonName
-    );
+
+    return states[networkState]);
+
 }
 function alertDismissed() {
     // do something
@@ -61,8 +56,16 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        //alert("It works!");
-        checkConnection();
+        internetConnection = checkConnection();
+
+        navigator.notification.beep(1);
+        navigator.vibrate(1000);
+        navigator.notification.alert(
+            internetConnection,          // message
+            alertDismissed,              // callback
+            'Conexão com a internet',    // title
+            'OK'                         // buttonName
+        );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
