@@ -31,16 +31,17 @@
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+            <div id="enunciado">Clique na imagem para escutar a sentença, caso uma esteja de acordo com a outra clique em "SIM", caso contrário clique em "NÃO".</div>
+            <div id="imagemSentenca">
+                <img src="img/imagem01.png" alt="Imagem 01">
             </div>
-            <div id="mapa">
-                teste
+            <div id="opcoes">
+                <a href="#" id="sim">Sim</a>
+                <a href="#" id="nao">Não</a>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
