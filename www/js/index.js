@@ -28,11 +28,7 @@ function checkConnection() {
     states[Connection.CELL_4G]  = '4G celular';
     states[Connection.CELL]     = 'Conexão genérica para celular';
     states[Connection.NONE]     = 'Sem acesso a internet';
-
-    //alert('Connection type: ' + states[networkState]);
-
-    return states[networkState]);
-
+    alert('Connection type: ' + states[networkState]);
 }
 function alertDismissed() {
     // do something
@@ -56,16 +52,15 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        internetConnection = checkConnection();
-
+        checkConnection();
         navigator.notification.beep(1);
-        navigator.vibrate(1000);
-        navigator.notification.alert(
-            internetConnection,          // message
-            alertDismissed,              // callback
-            'Conexão com a internet',    // title
-            'OK'                         // buttonName
-        );
+        // navigator.vibrate(1000);
+        // navigator.notification.alert(
+        //     internetConnection,          // message
+        //     alertDismissed,              // callback
+        //     'Conexão com a internet',    // title
+        //     'OK'                         // buttonName
+        // );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
