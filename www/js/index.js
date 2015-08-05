@@ -80,7 +80,7 @@ var app = {
             'OK'                         // buttonName
         );
         $("#playButton").click(function(){
-            playAudio("/appexpoente/www/audio/01.mp3");
+            playAudio("file:///android_asset/audio/01.mp3");
         });
     },
     // Update DOM on a Received Event
