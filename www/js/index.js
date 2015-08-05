@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- var internetConnection;
+var internetConnection;
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -56,9 +56,8 @@ var app = {
         checkConnection();
         navigator.notification.beep(1);
         navigator.vibrate(1000);
-        //alert(internetConnection);
         navigator.notification.alert(
-            "Teste 123",          // message
+            internetConnection,          // message
             alertDismissed,              // callback
             'Conexão com a internet',    // title
             'OK'                         // buttonName
