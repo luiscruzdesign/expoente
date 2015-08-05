@@ -80,7 +80,7 @@ var app = {
             'OK'                         // buttonName
         );
         $("#playButton").click(function(){
-            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+            playAudio("../audio/01.mp3");
         });
     },
     // Update DOM on a Received Event
