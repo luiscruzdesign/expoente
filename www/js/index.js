@@ -79,9 +79,8 @@ var app = {
             'Conexão com a internet',    // title
             'OK'                         // buttonName
         );
-        playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
         $("#playButton").click(function(){
-            alert("Clique detectado");
+            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
         });
     },
     // Update DOM on a Received Event
