@@ -35,6 +35,23 @@ function alertDismissed() {
     // do something
     console.log("Alert dismissed");
 }
+// Play audio
+//
+function playAudio(url) {
+    // Play the audio file at url
+    var my_media = new Media(url,
+        // success callback
+        function () {
+            console.log("playAudio():Audio Success");
+        },
+        // error callback
+        function (err) {
+            console.log("playAudio():Audio Error: " + err);
+        }
+    );
+    // Play audio
+    my_media.play();
+}
 var app = {
     // Application Constructor
     initialize: function() {
@@ -62,6 +79,7 @@ var app = {
             'Conexão com a internet',    // title
             'OK'                         // buttonName
         );
+        playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
