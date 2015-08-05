@@ -15,7 +15,7 @@
   <preference name="exit-on-suspend" value="false"/>
   <preference name="show-splash-screen-spinner" value="true"/>
   <preference name="auto-hide-splash-screen" value="true"/>
-  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreen" value="splash"/>
   <preference name="SplashScreenDelay" value="5000" />
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
@@ -54,7 +54,7 @@
   <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024"/>
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>-->
-  <gap:splash src="splash.jpg"/>
+  <gap:splash src="splash.png"/>
   
   <access origin="*"/>
 </widget>
