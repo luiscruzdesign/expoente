@@ -55,11 +55,11 @@ function playAudio(url) {
 function getPhoneGapPath() {
 
     var path = window.location.pathname;
-    pathLength = path.length;
-    pathCorte = pathLength - 10;
-    newPath = path.substr( pathLength, pathCorte );
-    path.replace('index.html', '');
-    alert(path);
+    //pathLength = path.length;
+    //pathCorte = pathLength - 10;
+    //newPath = path.substr( pathLength, pathCorte );
+    newPath = path.replace('index.html', '');
+    alert(newPath);
 };
 var app = {
     // Application Constructor
