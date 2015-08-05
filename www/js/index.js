@@ -80,9 +80,9 @@ var app = {
             'OK'                         // buttonName
         );
         playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
-        $("#opcoes a").click(function(event) {
-            event.preventDefault();
-            alert("Clique capturado!");
-        });
+        // $("#opcoes a").click(function(event) {
+        //     event.preventDefault();
+        //     alert("Clique capturado!");
+        // });
     },
 };
