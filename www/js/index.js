@@ -55,9 +55,9 @@ function playAudio(url) {
 function getPhoneGapPath() {
 
     var path = window.location.pathname;
-    //path = path.substr( path.length, path.length - 10 );
-    pathLength = path.length;
-    alert(path + "Tamanho: " + pathLength + "Último nùmero: " + (pathLength - 10));
+    path = path.substr( path.length, (path.length - 10) );
+    //pathLength = path.length;
+    alert(path);
 
 };
 var app = {
