@@ -17,6 +17,7 @@
  * under the License.
  */
 var internetConnection;
+var snd = new Media( getPhoneGapPath() + 'test.wav' );
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -52,6 +53,13 @@ function playAudio(url) {
     // Play audio
     my_media.play();
 }
+function getPhoneGapPath() {
+
+    var path = window.location.pathname;
+    path = path.substr( path, path.length - 10 );
+    return 'file://' + path;
+
+};
 var app = {
     // Application Constructor
     initialize: function() {
@@ -79,8 +87,9 @@ var app = {
             'Conexão com a internet',    // title
             'OK'                         // buttonName
         );
+
         $("#playButton").click(function(){
-            alert("open audio");
+            alert(snd);
             playAudio("file:///android_asset/audio/01.mp3");
         });
     },
