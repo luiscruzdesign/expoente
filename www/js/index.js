@@ -58,6 +58,7 @@ function getPhoneGapPath() {
     pathLength = path.length;
     pathCorte = pathLength - 10;
     newPath = path.substr( pathLength, pathCorte );
+    path.replace('index.html', '');
     alert(path);
 };
 var app = {
