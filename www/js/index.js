@@ -80,6 +80,7 @@ var app = {
             'OK'                         // buttonName
         );
         $("#playButton").click(function(){
+            alert("open audio");
             playAudio("file:///android_asset/audio/01.mp3");
         });
     },
