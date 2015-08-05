@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- var internetConnection = "teste";
+ var internetConnection;
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -30,7 +30,6 @@ function checkConnection() {
     states[Connection.CELL]     = 'Conexão genérica para celular';
     states[Connection.NONE]     = 'Sem acesso a internet';
     internetConnection = states[networkState];
-    alert(internetConnection);
 }
 function alertDismissed() {
     // do something
@@ -57,13 +56,13 @@ var app = {
         checkConnection();
         navigator.notification.beep(1);
         navigator.vibrate(1000);
-        alert(internetConnection);
-        // navigator.notification.alert(
-        //     internetConnection,          // message
-        //     alertDismissed,              // callback
-        //     'Conexão com a internet',    // title
-        //     'OK'                         // buttonName
-        // );
+        //alert(internetConnection);
+        navigator.notification.alert(
+            internetConnection,          // message
+            alertDismissed,              // callback
+            'Conexão com a internet',    // title
+            'OK'                         // buttonName
+        );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
