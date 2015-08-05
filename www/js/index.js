@@ -91,7 +91,8 @@ var app = {
         getPhoneGapPath();
         $("#playButton").click(function(){
             alert("Vai botao");
-            playAudio("file:///android_asset/audio/01.mp3");
+            createPath = newPath + "/audio/01.mp3";
+            playAudio(createPath);
         });
     },
     // Update DOM on a Received Event
