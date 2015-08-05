@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var internetConnection = "teste";
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -28,7 +29,8 @@ function checkConnection() {
     states[Connection.CELL_4G]  = '4G celular';
     states[Connection.CELL]     = 'Conexão genérica para celular';
     states[Connection.NONE]     = 'Sem acesso a internet';
-    alert('Connection type: ' + states[networkState]);
+    internetConnection = states[networkState];
+    alert(internetConnection);
 }
 function alertDismissed() {
     // do something
@@ -54,7 +56,8 @@ var app = {
         app.receivedEvent('deviceready');
         checkConnection();
         navigator.notification.beep(1);
-        // navigator.vibrate(1000);
+        navigator.vibrate(1000);
+        alert(internetConnection);
         // navigator.notification.alert(
         //     internetConnection,          // message
         //     alertDismissed,              // callback
