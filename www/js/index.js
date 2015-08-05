@@ -58,7 +58,7 @@ var app = {
         navigator.vibrate(1000);
         //alert(internetConnection);
         navigator.notification.alert(
-            internetConnection,          // message
+            "Teste 123",          // message
             alertDismissed,              // callback
             'Conexão com a internet',    // title
             'OK'                         // buttonName
